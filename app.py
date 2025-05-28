@@ -54,7 +54,7 @@ ES_PASSWORD = os.getenv("ES_PASSWORD")
 INDEX_NAME = os.getenv("INDEX_NAME")
 
 # Establecer la clave de OpenAI como variable de entorno
-os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY    # no estaba originalmente
+#os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY    # no estaba originalmente SACAR PARA RAILWAY
 
 
 # ===================== FLASK ======================
