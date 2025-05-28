@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta Documental del Sistema</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .navbar, .footer {
+            background-color: #004080;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #004080;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            font-size: 16px;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003366;
+        }
+
+        .respuesta {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #eef4ff;
+            border-left: 5px solid #004080;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>Asistente Documental Inteligente</h2>
+    </div>
+
+    <div class="container">
+        <h1>Consulta el estado de componentes e historial del sistema</h1>
+        <form method="POST">
+            <label for="solicitud">Describe tu consulta:</label><br>
+            <textarea id="solicitud" name="solicitud" placeholder="Ejemplo: ¿Cuál fue el último registro de activación del módulo solar?" required></textarea>
+            <br>
+            <button type="submit">Consultar</button>
+        </form>
+
+        {% if resultado_solicitud %}
+            <div class="respuesta">
+                <strong>Respuesta:</strong><br>
+                {{ resultado_solicitud }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="footer">
+        Sistema de Consulta Documental | Proyecto de domótica e IA - 2025
+    </div>
+</body>
+</html>
