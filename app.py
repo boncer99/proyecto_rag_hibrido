@@ -395,5 +395,5 @@ def consulta_rapida():
 
 
 #necesario si se ejecuta de manera local , en consola python app.py
-if __name__ == "__main__":
-    app.run(debug=True)
+#if __name__ == "__main__":
+#    app.run(debug=True)
